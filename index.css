@@ -1,0 +1,126 @@
+h1{
+    color: blue;
+}
+    /*  
+        h1 - selector
+        color - property
+        blue - value
+        Multiple CSS declarations are separated with semicolons,
+    */
+
+    /*-------selectors---------*/
+/* tag selector */
+h1 {
+    font-size: 24px;
+}
+
+/* class selector */
+.intro {
+    font-size: 18px;
+}
+
+/* id selector */
+#main {
+    font-size: 16px;
+    /*id name cannot start with a number!*/
+
+}
+/* universal selector */
+* {
+    color: red;
+    /* this will affect to all elements */
+}
+
+/*Group selector */
+h1, h2, h3 {
+    font-family: Arial;
+}
+
+/*  
+    inline style has higghest precedence
+    then internal and external depends as follows
+
+    internal style is defined after the link to the external style sheet, 
+    the internal style will override the external style sheet vice versa
+ */
+
+/*-------color formats---------*/
+h1{
+    color:tomato;
+    background-color: rgb(55, 55, 55);
+    color: #ff0000;     /*RRGGBB is 6 digit format and #f00 also same color in 3digit format */
+    color: hsl(0, 100%, 50%);
+    color: rgba(255, 0, 0, 0.5);
+    color:hsla(9, 100, 64, 0.5);
+}
+
+/*-------background---------*/
+
+body{
+    background-color: #b0c4de;
+    background-image: url('img_tree.png');
+    
+    background-repeat: no-repeat;   /*By default, the image is repeated so it covers the entire element.*/
+    background-position: center;
+    background-attachment: fixed;       /*fixed-fixed in place of the screen
+                                            scroll-fixed in the place of the selected place, when scrolls it also goes along with that. */                        
+}
+
+/*above properties can written as follows it called shorthand*/
+body{
+    background: #b0c4de url('img_tree.png') no-repeat center fixed;
+}
+
+/*-------boarders---------*/
+body{
+    border-style: solid;/*there are many styles (boarder types.png) */
+    border-style: dotted solid;/*2 values- top|sides
+                                 3 values- top|sides|bottom
+                                 4 values- top|right|bottom|left*/
+
+    /*border-width value can set specific size using px,cm,etc. And by using pre-defined thin,medium,thick words*/
+    border-width: 5px;/*2 values- top|sides & 3 values- top|sides|bottom & 4 values- top|right|bottom|left*/
+    
+    border-color: red;/*this also can demostrate as width for separate borders as above*/
+    border-radius: 20px;/*rounded corners*/
+
+    /*also can access specific side using*/
+    border-top-style: dotted;
+}
+/*boarders also can shorthand like above */
+
+/*margins*/
+h1{
+    margin: auto;   /*auto-horizontally center the element within its container.
+                      5px - specific value also can be assigned
+                      inherit - it enherits the value from its parent element*/
+    
+    /*access sides seperately*/
+    margin-top: 0cm;
+    
+}
+/*2 values- top|sides & 3 values- top|sides|bottom & 4 values- top|right|bottom|left*/
+/*margins also can shorthand like above */
+
+/*padding*/
+div{
+    padding: 25px;
+
+}
+/*PADDING :- is the space between the content and the border. */
+/*also can access sides seperately*/
+/*2 values- top|sides & 3 values- top|sides|bottom & 4 values- top|right|bottom|left*/
+/*padding also can shorthand like above */
+
+/*width and height*/
+div{
+    width: 300px;
+    height: 100px;
+}
+/* values that can assign: 
+        auto - This is default. The browser calculates the height and width
+        length - Defines the height/width in px, cm, etc.
+        % - Defines the height/width in percent of the containing block
+        initial - Sets the height/width to its default value
+        inherit - The height/width will be inherited from its parent value
+*/

@@ -1,0 +1,585 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <!--tab title-->
+        <title>Test Web Application</title>
+
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="http://"> 
+
+        <!--internal CSS-->
+        <style>
+        
+            body{
+                font-family: Arial, sans-serif;
+                color: cornflowerblue;
+            }
+    
+            h1{
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            /*The descendant selector targets children inside a specific parent. 
+                It consists of the parent selector, followed by a space, 
+                followed by the child selector.*/////
+            
+            h1 b{
+                color: red;
+            } /*without selecting all bold texts use only bolod texts in side the h1 tag*/
+
+            /*add boarders to table*/
+        
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                
+            }
+            /*By using comma you can apply same style to multiple elements*/
+
+            /*add colours to one after other row*/
+            tr:nth-child(even) {
+                background-color: red;
+            }
+            tr:hover {background-color: #51dada;}
+
+
+        </style>
+
+        <!--external CSS-->
+        <link rel="stylesheet" href="styles.css">
+
+        <!--internal JS-->
+        <script>
+            <!--change text-->
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            <!--change styles-->
+            document.getElementById("demo").style.color = "red";
+            <!--change sttribute-->
+            document.getElementById("demo").src = "abc.jpg";
+        </script>
+
+        <!--meta data-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Base address defined early-->
+        <base href="https://www." target="_blank">
+
+        
+
+
+    </head>
+    
+
+    <body>
+        <!--header-->
+        <header>
+            element typically contains:
+
+            one or more heading elements (<h1> - <h6>)
+            logo or icon
+            authorship information
+        </header>
+
+        <!--navigation bar-->
+        <nav>
+            <a href="/html/">HTML</a> |
+            <a href="/css/">CSS</a> |
+            <a href="/js/">JavaScript</a> |
+            <a href="/jquery/">jQuery</a>
+        </nav>
+
+        <!--headings-->
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Heading 1</h1>
+
+        <!--links-->
+        <a href=""www.puka.com"> THIE IS  link </a>
+
+        <a href="https://www.w3schools.com/" target="_blank">Blank target link</a>
+        <a href="https://www.w3schools.com/" target="_self">self target link</a>
+        <a href="https://www.w3schools.com/" target="_parent">parent target link</a>
+        <a href="https://www.w3schools.com/" target="_top">top target link</a>
+        
+        <a href="mailto:senhirusenaweera@gmail.com">open mail interface and send a mail to thi address</a>
+
+        <button onclick="document.location='https://www.w3schools.com/'">Link as a button</button>
+
+        <!--Image-->
+        <img src="abc.jpg" alt="sample image">
+
+        <!--paragraphs-->
+        <p style="color: saddlebrown;">paragraph</p>
+        //To apply multiple properties to an element, separate CSS properties with a semicolon ;
+
+        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+        <bdo dir="rtl">This text will be written from right to left</bdo>
+
+        <p title="basic important tags">
+
+            this is a sample paragraph that i write as a practice
+            <b> Bold text </b>
+            <strong> - Important text </strong>
+            <i> - Italic text </i>
+            <em> - Emphasized text </em>
+            <mark> - Marked text </mark>
+            <small> - Smaller text </small>
+            <del> - Deleted text </del>
+            <ins> - Inserted text </ins>
+            <sub> - Subscript text </sub>
+            <sup> - Superscript text </sup>
+            <br>here after i break the paragraph. <b>this tag doesnt contain closing tag</b>
+
+        </p>
+        //this will lead a one line blank
+        <p>abc</p>
+        <p>def</p>
+
+        <p>hr tag test 1</p>
+        <hr>
+        <p>hr tag test 2</p>
+
+        <p>break line sample1 <br>break line sample 2</p>
+
+        <pre>
+        pretag line 1
+this gives output
+    same as IDE
+        Ha HAaaaaa
+        </pre>
+
+        <!--Tables-->
+        <p>table test</p>
+        <table border="1" style="width: 100%;">
+            <tr>
+                <th colspan="2">Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Row 1, Col 1</td>
+                <td>Row 1, Col 2</td>
+                <td>Row 1, Col 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Col 1</td>
+                <td>Row 2, Col 2</td>
+                <td>Row 2, Col 3</td>
+            </tr>
+        </table>
+
+        
+        <!--Blockquote-->
+        <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. 
+        As the world's leading conservation organization, WWF works in nearly 100 countries.
+        At every level, we collaborate with people around the world to develop and deliver 
+        innovative solutions that protect communities, wildlife, and the places in which they live.
+        </blockquote>
+
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+        <!--Bookmarks-->
+        <h2 id="C4">Chapter 4</h2>
+        <a href="#C4">Jump to Chapter 4</a>
+
+        <!-- this can make some areras of picuture clickable-->
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+
+        <!--This way the browser can choose the image that best fits the current view and/or device.-->
+        <picture>
+            <source media="(min-width: 650px)" srcset="img_food.jpg">
+            <source media="(min-width: 465px)" srcset="img_car.jpg">
+            <img src="img_girl.jpg">
+        </picture>
+
+        <!--address-->
+        <address>
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+        <!--list-->
+        <ul style="list-style-type: circle;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Sugar</li>
+            <li>Chocolate</li>
+        </ul>
+
+        <ol style="list-style-type: lower-roman;">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+        </ol>
+
+        <!--nested list-->
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+              <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+              </ul>
+            </li>
+            <li>Milk</li>
+        </ul>
+
+        <!--description list-->
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <!--Blocks-->
+        <div style="background-color:black;color:white;padding:20px;">
+            <h2>Div container</h2>
+            <p>has no required attributes, but style, class and id are common</p>
+        </div>
+
+        <p>span element is an inline container used to mark up a <span style="color:blue;font-weight:bold;">part of a text</span>, or a part of a document.</p>
+
+
+        <!--Class and Id-->
+
+        <!--The HTML class attribute specifies one or more class names for an element
+            Classes are used by CSS and JavaScript to select and access specific elements
+            The class attribute can be used on any HTML element
+            The class name is case sensitive
+            Different HTML elements can point to the same class name
+            JavaScript can access elements with a specific class name with the getElementsByClassName() method-->
+
+        <h2 class="city">Paris</h2>
+        <p class="city">Paris is the capital of France</p>
+    
+
+                        <style>
+                            /* Style the element with the id "myHeader" */
+                            #myHeader {
+                            background-color: lightblue;
+                            color: black;
+                            padding: 40px;
+                            text-align: center;
+                            }
+                            
+                            /* Style all elements with the class name "city" */
+                            .city {
+                            background-color: tomato;
+                            color: white;
+                            padding: 10px;
+                            }
+                        </style>
+            
+        <!-- An element with a unique id -->
+        <h1 id="myHeader">My Cities</h1>
+            
+        <!-- Multiple elements with same class -->
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+            
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+
+        <!--IFrames-->
+        <!--An inline frame is used to embed another document within the current HTML document.
+            Use the height and width attributes to specify the size of the iframe in html or using css
+            
+            if you use YouTube url you can embedd youtube video to page
+            controls=0  : no control bar
+            controls=1  : control bar (default)
+            autoplay=1  : video will start automatically
+            loop=1      : video will play in loop
+            mute=1      : video will start muted
+            modestbranding=1 : removes the YouTube logo from the control bar
+            rel=0       : prevents the player from showing related videos when the video finishes
+                these are some attributes that can be used with youtube url
+             -->
+        <iframe src="url" title="description"></iframe>
+
+        <!--Responsive Web-->
+        <!--The viewport is the user's visible area of a web page.
+            It varies with the device - it will be smaller on a mobile phone than on a computer screen.
+            You should include the following <meta> element in all your web pages:
+            Use CSS Frameworks also easy to make responsice web page use <link> to connect bootstrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> //this should be included in the head tag
+        <h1 style="font-size:10vw">Hello World</h1> //vw will make the font size responsive
+
+
+        <!--Keyboard input massage display-->
+        <!--There is a pre defined font that display keys <kbd> does the font changing part -->
+        <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+        <!--The <samp> tag is used to define sample output from a computer program.-->
+        <p>Computer output: <samp>This text is user input</samp></p>
+
+        <var><!--The <var> tag is used to define a variable in programming or in a mathematical expression.Font turn into italic--></var>
+
+        <section>
+            <!--The <section> element defines a section in a document.write within the <section> tag can simply impliment this
+            Examples of where a <section> element can be used:
+            Chapters
+            Introduction
+            News items
+            Contact information-->
+        </section>
+
+        <article>
+            <!--The <article> element specifies independent, self-contained content.
+            Examples of where the <article> element can be used:
+            Forum posts
+            Blog posts
+            User comments
+            Product cards
+            Newspaper articles-->
+        </article>
+
+        <aside>
+        <!--The <aside> element defines some content aside from the content it is placed in.
+            The <aside> content should be indirectly related to the surrounding <content class="-->
+        </aside>
+        
+        <!--
+            <article>	Defines independent, self-contained content
+            <aside>	Defines content aside from the page content
+            <details>	Defines additional details that the user can view or hide
+            <figcaption>	Defines a caption for a <figure> element
+            <figure>	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+            <footer>	Defines a footer for a document or section
+            <header>	Specifies a header for a document or section
+            <main>	Specifies the main content of a document
+            <mark>	Defines marked/highlighted text
+            <nav>	Defines navigation links
+            <section>	Defines a section in a document
+            <summary>	Defines a visible heading for a <details> element
+            <time>	Defines a date/time
+        -->
+
+        <!--display < or > like entities
+
+            To display a less than sign (<) we must write: &lt; or &#60;
+
+                nbs	&nbsp;	                        &#160;	
+            <	less than	            &lt;	    &#60;	
+            >	greater than	        &gt;	    &#62;	
+            &	ampersand	            &amp;	    &#38;	
+            "	double quotation mark	&quot;	    &#34;	
+            '	single quotation mark	&apos;	    &#39;	
+            ¢	cent	                &cent;	    &#162;	
+            £	pound	                &pound;	    &#163;	
+            ¥	yen	                    &yen;	    &#165;	
+            €	euro	                &euro;	    &#8364;	
+            ©	copyright	            &copy;	    &#169;	
+            ®	trademark	            &reg;	    &#174;
+                    &
+            Emojis
+            😃	&#128515;
+                    &
+            Mathematical Symbols
+            ∞	&#8734;
+                    & others
+                    
+            these characters are include in UTF-8 character set
+            it has been created by usin ASCII Unicode and ISO 8859-1
+            -->
+        
+            <!--
+                scheme - defines the type of Internet service (most common is http or https)
+                prefix - defines a domain prefix (default for http is www)
+                domain - defines the Internet domain name (like w3schools.com)
+                port - defines the port number at the host (default for http is 80)
+                path - defines a path at the server (If omitted: the root directory of the site)
+                filename - defines the name of a document or resource
+            -->
+            
+            <!--URL ENCODING
+            URLs cant contain characters beside ASCII
+            so beside that characeters and spaces are replace with speacial characters like %,+
+            -->
+
+            <!--
+            XML is a markup language where all documents must be marked up correctly (be "well-formed").
+            XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML).
+            In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup. 
+            So XHTML comes with a much stricter error handling.
+
+                        <!DOCTYPE> is mandatory
+                        The xmlns attribute in <html> is mandatory
+                        <html>, <head>, <title>, and <body> are mandatory
+                        Elements must always be properly nested
+                        Elements must always be closed
+                        Elements must always be in lowercase
+                        Attribute names must always be in lowercase
+                        Attribute values must always be quoted
+                        Attribute minimization is forbidden
+
+            -->
+
+            <!--Forms-->
+            <form action="/action_page.php" target="_self">
+                <!--The form-handler is specified in the form's action attribute.
+                    The action attribute defines the action to be performed when the form is submitted.
+                    The target attribute specifies where to display the response that is received after submitting the form.
+                    
+                    The method attribute specifies the HTTP method to be used when submitting the form data.
+                    The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+                    Notes on GET:
+                        Appends the form data to the URL, in name/value pairs
+                        NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+                        The length of a URL is limited (2048 characters)
+                        Useful for form submissions where a user wants to bookmark the result
+                        GET is good for non-secure data, like query strings in Google
+                    Notes on POST:
+                        Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+                        POST has no size limitations, and can be used to send large amounts of data.
+                        Form submissions with POST cannot be bookmarked
+
+                    The autocomplete attribute specifies whether a form should have autocomplete on or off.
+-->
+                <label for="fname">First name:</label>  <br>
+                <input type="text" value="example_name"><br>
+
+
+                <input type="radio">                    <br>
+                <label for="">option 1</label>          <br>
+                <input type="radio">                    <br>
+                <label for="">option 2</label>          <br>
+
+
+                <input type="checkbox">                 <br>
+                <label for="">option 1</label>          <br>
+                <input type="checkbox">                 <br>
+                <label for="">option 2</label>          <br>
+
+
+                <input type="submit">   <br> <!--submit data to the form handler. it specifies it in thr forms action attribute-->
+                
+                <label for="cars">Choose a car:</label>
+                <select id="cars" name="cars" size="4" multiple> <!--multiple attribute allows multiple selection-->
+                    <option value="volvo" selected>Volvo</option> <!--selected attribute specifies that an option should be pre-selected when the page loads-->
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+                <textarea name="message" rows="10" cols="30"> <!--The <textarea> element defines a multi-line input field (a text area):-->
+                    Default example text to be in box
+                </textarea>
+
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+                
+                <!--The <fieldset> element is used to group related data in a form.
+                    The <legend> element defines a caption for the <fieldset> element.
+                        it creates a boarder arround the selected inputs and display container name as given in the legend
+                        -->
+                <fieldset>
+                    <legend>Personalia:</legend>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+
+                <!--The <datalist> element specifies a list of pre-defined options for an <input> element.
+                    Users will see a drop-down list of the pre-defined options as they input data.
+                    The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+                        -->
+                        <input type="text" list="browsers">
+                        <datalist id="browsers">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                            <option value="Microsoft Edge">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                <!--The <output> element represents the result of a calculation (like one performed by a script).-->
+                    <output name="x" for="a b"></output>
+
+            </form>
+
+            <video width="320" height="240" controls autoplay>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+
+            <audio controls autoplay>
+                <source src="abc.mp3" type="audio/mpeg">
+                <source src="sbc.ogg" type="audio/ogg">
+                Your browser does not support the video tag.
+            </audio>
+
+            <!--control attribute adds control buttons to the video and audio
+                autoplay attribute adds let audio or video file start automatically
+                by adding muted attribute make play start muted-->
+
+
+        
+        <!--Footer-->
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </body>
+</html>
+                ________________________________________________________
+                                        APIs
+                -------------------------------------------------------
+
+-----HTML GEOLOCATION API------
+
+    The HTML Geolocation API is used to locate a user's position.
+    Since this can compromise user privacy, the position is not available unless the user approves it.
+    The most common way to use the HTML Geolocation API is to get the user's position.
+    The user's position is returned in a position object.
+    The getCurrentPosition() method is used to return the user's position AS Longitude AND Latitude properties.
+    The other properties are returned if available
+    The example below returns the latitude and longitude
+
+    <script>
+        const x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+-------HTML DRAG AND DROP---------
+
+
+-------HTML Web Storage---------
+
+-------HTML Web Workers---------
+
+-------HTML SSE---------
+
+
+
+
+
