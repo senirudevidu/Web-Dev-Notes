@@ -1,5 +1,9 @@
+/*---------------------------------------------------------------------------------------
+                            Representation of syntax and properties
+---------------------------------------------------------------------------------------*/
+
 h1{
-    color: blue;
+    color: blue; 
 }
     /*  
         h1 - selector
@@ -8,7 +12,9 @@ h1{
         Multiple CSS declarations are separated with semicolons,
     */
 
-    /*-------selectors---------*/
+/*---------------------------------------------------------------------------------------
+                                        Selectors
+---------------------------------------------------------------------------------------*/
 /* tag selector */
 h1 {
     font-size: 24px;
@@ -44,8 +50,9 @@ h1, h2, h3 {
     the internal style will override the external style sheet vice versa
  */
 
-/*-------color formats---------*/
-h1{
+/*---------------------------------------------------------------------------------------
+                                    colour Formats
+---------------------------------------------------------------------------------------*/h1{
     color:tomato;
     background-color: rgb(55, 55, 55);
     color: #ff0000;     /*RRGGBB is 6 digit format and #f00 also same color in 3digit format */
@@ -54,7 +61,9 @@ h1{
     color:hsla(9, 100, 64, 0.5);
 }
 
-/*-------background---------*/
+/*---------------------------------------------------------------------------------------
+                                        Background
+---------------------------------------------------------------------------------------*/
 
 body{
     background-color: #b0c4de;
@@ -71,7 +80,9 @@ body{
     background: #b0c4de url('img_tree.png') no-repeat center fixed;
 }
 
-/*-------boarders---------*/
+/*---------------------------------------------------------------------------------------
+                                        Boarders
+---------------------------------------------------------------------------------------*/
 body{
     border-style: solid;/*there are many styles (boarder types.png) */
     border-style: dotted solid;/*2 values- top|sides
@@ -89,7 +100,9 @@ body{
 }
 /*boarders also can shorthand like above */
 
-/*margins*/
+/*---------------------------------------------------------------------------------------
+                                    Margins
+---------------------------------------------------------------------------------------*/
 h1{
     margin: auto;   /*auto-horizontally center the element within its container.
                       5px - specific value also can be assigned
@@ -102,7 +115,9 @@ h1{
 /*2 values- top|sides & 3 values- top|sides|bottom & 4 values- top|right|bottom|left*/
 /*margins also can shorthand like above */
 
-/*padding*/
+/*---------------------------------------------------------------------------------------
+                                        Paddings
+---------------------------------------------------------------------------------------*/
 div{
     padding: 25px;
 
@@ -112,10 +127,19 @@ div{
 /*2 values- top|sides & 3 values- top|sides|bottom & 4 values- top|right|bottom|left*/
 /*padding also can shorthand like above */
 
-/*width and height*/
+/*---------------------------------------------------------------------------------------
+                                    Width and Height
+---------------------------------------------------------------------------------------*/
 div{
     width: 300px;
     height: 100px;
+
+    max-width: 600px;
+    /*window ek loku krddi max-width eken passe element ek loku wenne na
+        min-width also like that
+        scroll bar will appear in some cases*/
+
+    max-height: 500px; 
 }
 /* values that can assign: 
         auto - This is default. The browser calculates the height and width
@@ -124,3 +148,164 @@ div{
         initial - Sets the height/width to its default value
         inherit - The height/width will be inherited from its parent value
 */
+
+/*---------------------------------------------------------------------------------------
+                                    Box Model
+---------------------------------------------------------------------------------------*/
+
+/* from inside to outside
+    content - The content of the box, where text and images appear
+    padding - Clears an area around the content. The padding is transparent
+    border - A border that goes around the padding and content
+    margin - Clears an area outside the border. The margin is transparent
+*/
+div {
+    width: 300px;
+    padding: 50px;
+    border: 15px solid green;
+    margin: 20px;
+    
+  }
+
+/*---------------------------------------------------------------------------------------
+                                        Outline
+---------------------------------------------------------------------------------------*/
+/*An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+nd may overlap other content. Also, the outline is NOT a part of the element's dimensions; 
+the element's total width and height is not affected by the width of the outline.*/
+
+div{
+    outline-style:dotted;           /*dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden*/
+    outline-color:#b0c4de;
+    outline-width:thin;             /*thin,medium,thick*/
+    outline-offset:auto;            /*this property is used to set the space between an outline and the border edge of an element. transparent*/
+
+    outline: 5px solid yellow;    /*shorthand*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*positioning */
+
+div{
+    position: static;
+    /*static-default value
+
+    relative- can change position relative to its normal position using top, bottom, left, right properties.
+
+    fixed- set the elemnt as new layer above the current layer and doesnt change when scroll.
+
+    sticky- normal it has own position on page. if you scroll down it acts like fixed.
+
+    absolute- relative to the nearest positioned ancestor(parent element).if no parent element is specified, it will be relative to the viewpoint.
+
+    z-index- positive values will set the element above the other element(overlap). 1,2 represents the order of greater stack
+             negative values will set the element below the other element;
+             no value - the element defined last in the HTML code will be shown on top.
+
+    when using relative,fixed,absolute,stickt you can use top,bottom,left,right,z-index properties to position the element.
+    */
+    top: 100px; /*that means that element push 100px from the top of the viewport*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*overflow*/
+
+div{
+    overflow: auto;
+    /*
+        visible - Default. The overflow is not clipped. The content renders outside the element's box
+        hidden - The overflow is clipped, and the rest of the content will be invisible
+        scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+        auto - Similar to scroll, but it adds scrollbars only when necessary
+    */
+
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+/*float and clear*/
+
+div{
+    float: left;
+    /*
+        left - The element is positioned to the left side of the container
+        right - The element is positioned to the right side of the container
+        none - The default. The element is not positioned and will take up the full width of its container
+        inherit - The float property is inherited from the parent element
+
+        Normally div elements will be displayed on top of each other. However, 
+        if we use float: left we can let elements float next to each other
+    */
+}
+
+div{
+    clear: both;
+    /* this need to use after for the element that after the float element
+        it will clear the float property and display the element below the float element. otherwise it will display next to the float element.
+    */
+    /*
+        left - The element will clear elements to the left of it
+        right - The element will clear elements to the right of it
+        both - The element will clear elements to both left and right of it
+    */
+
+    box-sizing: border-box;/* border-box - The width and height properties include the content, padding, and border, but not the margin.
+                              content-box - This is the default value. The width and height properties include only the content. */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    /*this is a trick to clear the float property for the parent element
+    clearfix is parent div class name*/
+  }
+ 
+/*display*/
+div{
+    display: inline;
+    /*inline - The element is displayed as an inline-level element (like span). Any height and width properties will have no effect
+      block - The element is displayed as a block-level element (like <p>). It starts on a new line and takes up the whole width
+      inline-block - The element is placed as an inline element (on the same line as adjacent content), but it can be styled as a block element
+      none - The element is completely removed
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
