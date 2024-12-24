@@ -52,7 +52,8 @@ h1, h2, h3 {
 
 /*---------------------------------------------------------------------------------------
                                     colour Formats
----------------------------------------------------------------------------------------*/h1{
+---------------------------------------------------------------------------------------*/
+h1{
     color:tomato;
     background-color: rgb(55, 55, 55);
     color: #ff0000;     /*RRGGBB is 6 digit format and #f00 also same color in 3digit format */
@@ -183,6 +184,33 @@ div{
     outline: 5px solid yellow;    /*shorthand*/
 }
 
+/*---------------------------------------------------------------------------------------
+                                        Text
+---------------------------------------------------------------------------------------*/
+
+div{
+    text-align: center; /*left, right, center, justify*/
+    text-align-last: justify ;  /* how to align the last line of a text.*/
+    vertical-align: baseline;/*baseline, sub, super, top, text-top, middle, bottom, text-bottom, initial, inherit
+                                container eke udada pahalada madada kiyana eka*/
+    
+    text-decoration: underline; /*none, underline, overline, line-through, initial, inherit*/
+    text-decoration-line:overline line-through underline  ; /*add a decoration line to text*/
+    text-decoration-color: #b0c4de;
+    text-decoration-style: solid; /*solid, double, dotted, dashed, wavy*/
+    text-decoration-thickness: 18px;
+
+    /*shorthand can be used with color,style,thikness line is required*/
+
+    text-transform: uppercase; /*uppercase, lowercase, capitalize, none, initial, inherit*/
+
+    text-indent: 50px; /*indent the first line of a text*/
+    letter-spacing: 3px; /*space between characters.can be positive or negative.*/
+    line-height: 9px;/*space between lines*/
+    word-spacing: 5px; /*space between words*/
+    white-space: nowrap; /*normal, nowrap, pre, pre-line, pre-wrap*/
+
+}
 
 
 
@@ -203,7 +231,9 @@ div{
 
 
 
-/*positioning */
+/*---------------------------------------------------------------------------------------
+                                        Position
+---------------------------------------------------------------------------------------*/
 
 div{
     position: static;
@@ -229,7 +259,9 @@ div{
     right: 0;
 }
 
-/*overflow*/
+/*---------------------------------------------------------------------------------------
+                                        Overflow handling
+---------------------------------------------------------------------------------------*/
 
 div{
     overflow: auto;
@@ -244,7 +276,9 @@ div{
     overflow-y: scroll; /* Add vertical scrollbar */
 }
 
-/*float and clear*/
+/*---------------------------------------------------------------------------------------
+                                        float and clearfix
+---------------------------------------------------------------------------------------*/
 
 div{
     float: left;
@@ -281,7 +315,9 @@ div{
     clearfix is parent div class name*/
   }
  
-/*display*/
+/*---------------------------------------------------------------------------------------
+                                        Display
+---------------------------------------------------------------------------------------*/
 div{
     display: inline;
     /*inline - The element is displayed as an inline-level element (like span). Any height and width properties will have no effect
@@ -291,9 +327,17 @@ div{
     */
 }
 
+/*---------------------------------------------------------------------------------------
+                                        Notes
+---------------------------------------------------------------------------------------*/
+/*
+Priority of CSS(This priority order is known as specificity)
+    1. Inline CSS
+    2. ID
+    3. Class
+    4. Element
 
-
-
+    */
 
 
 
